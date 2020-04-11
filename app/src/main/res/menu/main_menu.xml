@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/col1"
+            android:title="@string/one_column"
+            android:titleCondensed="1c"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/col2"
+            android:title="@string/two_columns"
+            android:titleCondensed="2c"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/col3"
+            android:title="@string/three_columns"
+            android:titleCondensed="3c"
+            app:showAsAction="never"/>
+    </group>
+
+</menu>
