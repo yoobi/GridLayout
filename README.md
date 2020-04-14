@@ -4,6 +4,8 @@ This project is an example of how I change the layout of my `RecyclerView` depen
 
 - There is no real architecture in this project as it is meant to be really straightforward
 
+![Demo gif](demo/demo.gif)
+
 ## Getting Started
 
 All you need is Android Studio and either an emulator or a real phone.
