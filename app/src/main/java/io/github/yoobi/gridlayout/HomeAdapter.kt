@@ -21,13 +21,7 @@ class HomeAdapter(private val requestManager: RequestManager,
         THREE_COLUMN
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when (viewType) {
-            ViewType.ONE_COLUMN.ordinal -> OneColumnViewHolder.from(parent)
-            ViewType.TWO_COLUMN.ordinal -> TwoColumnViewHolder.from(parent)
-            else -> ThreeColumnViewHolder.from(parent)
-        }
-    }
+    override fun getItemCount(): Int = data.size
 
     override fun getItemViewType(position: Int): Int {
         return when(layoutManager?.spanCount){
@@ -37,7 +31,13 @@ class HomeAdapter(private val requestManager: RequestManager,
         }
     }
 
-    override fun getItemCount(): Int = data.size
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return when (viewType) {
+            ViewType.ONE_COLUMN.ordinal -> OneColumnViewHolder.from(parent)
+            ViewType.TWO_COLUMN.ordinal -> TwoColumnViewHolder.from(parent)
+            else -> ThreeColumnViewHolder.from(parent)
+        }
+    }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = data[position]

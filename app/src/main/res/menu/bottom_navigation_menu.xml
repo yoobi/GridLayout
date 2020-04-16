@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Dummy Menu1"
+        android:icon="@android:drawable/btn_star"/>
+    <item android:title="Dummy Menu2"
+        android:icon="@android:drawable/presence_video_online"/>
+
+</menu>
